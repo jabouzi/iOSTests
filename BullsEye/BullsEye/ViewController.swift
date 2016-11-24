@@ -9,11 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var currentValue = 50;
+    
+    @IBOutlet weak var sliderBar: UISlider!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var roundLabel: UILabel!
+
+    var currentValue: Int = 0;
+    var targetValue: Int = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        currentValue = 50
+        targetValue = 1 + Int(arc4random_uniform(100))
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,8 +29,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func updateLabels() {
+        scoreLabel.text = String(targetValue)
+    }
+    
     @IBAction func showAlert() {
-        let message = "The value of the slider is: \(currentValue)"
+        let message = "The value of the slider is: \(currentValue) The random number is \(targetValue)"
         let alert = UIAlertController(title: "Slider Value", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Awesom", style: .default, handler: nil)
         
@@ -33,6 +45,14 @@ class ViewController: UIViewController {
     
     @IBAction func sliderMoved(_ slider: UISlider) {
         currentValue = Int(slider.value)
+    }
+    
+    @IBAction func showAbout() {
+        
+    }
+    
+    @IBAction func startOver() {
+        
     }
 
 
