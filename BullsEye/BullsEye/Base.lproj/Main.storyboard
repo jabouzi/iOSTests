@@ -69,7 +69,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start Over"/>
                                 <connections>
-                                    <action selector="startOver" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wxt-WN-8r1"/>
+                                    <action selector="startOver" destination="BYZ-38-t0r" eventType="touchUpInside" id="aB9-Kw-iRU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRD-mX-ssB">
@@ -112,8 +112,9 @@
                     </view>
                     <connections>
                         <outlet property="roundLabel" destination="sDv-dI-kmh" id="Iyp-BX-jjv"/>
-                        <outlet property="scoreLabel" destination="wxf-Ja-aeA" id="5FA-qN-6jd"/>
+                        <outlet property="scoreLabel" destination="679-PB-rMn" id="YIo-6V-5nQ"/>
                         <outlet property="sliderBar" destination="YmX-PW-A9s" id="wTW-gt-fAZ"/>
+                        <outlet property="targetLabel" destination="3IW-y5-TtJ" id="Scq-aM-4i4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
