@@ -26,6 +26,22 @@ class ViewController: UIViewController {
         
         startNewRound()
         updateLabels()
+        
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")
+        sliderBar.setThumbImage(thumbImageNormal, for: .normal)
+        
+        let thumbImageHighlighted = #imageLiteral(resourceName: "SliderThumb-Highlighted")
+        sliderBar.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        let trackleftImage = #imageLiteral(resourceName: "SliderTrackLeft")
+        let trackleftResizable = trackleftImage.resizableImage(withCapInsets: insets)
+        sliderBar.setMinimumTrackImage(trackleftResizable, for: .normal)
+        
+        let trackRightImage = #imageLiteral(resourceName: "SliderTrackRight")
+        let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
+        sliderBar.setMaximumTrackImage(trackRightResizable, for: .normal)
     }
 
     override func didReceiveMemoryWarning() {
