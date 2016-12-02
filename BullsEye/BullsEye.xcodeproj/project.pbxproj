@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72CB6F4A1DF11AA500B9AA04 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 72CB6F491DF11AA500B9AA04 /* BullsEye.html */; };
 		D76945161DE8824F00FF9EA1 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76945151DE8824F00FF9EA1 /* AboutViewController.swift */; };
 		D7E8C9491DE381B100EB998A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8C9481DE381B100EB998A /* AppDelegate.swift */; };
 		D7E8C94B1DE381B100EB998A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8C94A1DE381B100EB998A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72CB6F491DF11AA500B9AA04 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 		D76945151DE8824F00FF9EA1 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutViewController.swift; path = ../AboutViewController.swift; sourceTree = "<group>"; };
 		D7E8C9451DE381B100EB998A /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E8C9481DE381B100EB998A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		D7E8C9471DE381B100EB998A /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				72CB6F491DF11AA500B9AA04 /* BullsEye.html */,
 				D76945151DE8824F00FF9EA1 /* AboutViewController.swift */,
 				D7E8C9481DE381B100EB998A /* AppDelegate.swift */,
 				D7E8C94A1DE381B100EB998A /* ViewController.swift */,
@@ -128,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7E8C9531DE381B100EB998A /* LaunchScreen.storyboard in Resources */,
+				72CB6F4A1DF11AA500B9AA04 /* BullsEye.html in Resources */,
 				D7E8C9501DE381B100EB998A /* Assets.xcassets in Resources */,
 				D7E8C94E1DE381B100EB998A /* Main.storyboard in Resources */,
 			);
