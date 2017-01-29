@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "727B76C51DFA3BFD00774EBA"
-               BuildableName = "Checklists.app"
-               BlueprintName = "Checklists"
-               ReferencedContainer = "container:Checklists.xcodeproj">
+               BlueprintIdentifier = "D7E8C9441DE381B100EB998A"
+               BuildableName = "BullsEye.app"
+               BlueprintName = "BullsEye"
+               ReferencedContainer = "container:BullsEye.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "727B76C51DFA3BFD00774EBA"
-            BuildableName = "Checklists.app"
-            BlueprintName = "Checklists"
-            ReferencedContainer = "container:Checklists.xcodeproj">
+            BlueprintIdentifier = "D7E8C9441DE381B100EB998A"
+            BuildableName = "BullsEye.app"
+            BlueprintName = "BullsEye"
+            ReferencedContainer = "container:BullsEye.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "727B76C51DFA3BFD00774EBA"
-            BuildableName = "Checklists.app"
-            BlueprintName = "Checklists"
-            ReferencedContainer = "container:Checklists.xcodeproj">
+            BlueprintIdentifier = "D7E8C9441DE381B100EB998A"
+            BuildableName = "BullsEye.app"
+            BlueprintName = "BullsEye"
+            ReferencedContainer = "container:BullsEye.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "727B76C51DFA3BFD00774EBA"
-            BuildableName = "Checklists.app"
-            BlueprintName = "Checklists"
-            ReferencedContainer = "container:Checklists.xcodeproj">
+            BlueprintIdentifier = "D7E8C9441DE381B100EB998A"
+            BuildableName = "BullsEye.app"
+            BlueprintName = "BullsEye"
+            ReferencedContainer = "container:BullsEye.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
