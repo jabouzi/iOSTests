@@ -12,6 +12,7 @@
 		72F8E6A21E3E5563000FCA85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F8E6A01E3E5563000FCA85 /* Main.storyboard */; };
 		72F8E6A41E3E5563000FCA85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F8E6A31E3E5563000FCA85 /* Assets.xcassets */; };
 		72F8E6A71E3E5563000FCA85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F8E6A51E3E5563000FCA85 /* LaunchScreen.storyboard */; };
+		72F8E6AF1E403B03000FCA85 /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F8E6AE1E403B03000FCA85 /* CheckListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		72F8E6A31E3E5563000FCA85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72F8E6A61E3E5563000FCA85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72F8E6A81E3E5563000FCA85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72F8E6AE1E403B03000FCA85 /* CheckListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				72F8E69C1E3E5563000FCA85 /* AppDelegate.swift */,
 				72F8E69E1E3E5563000FCA85 /* CheckListViewController.swift */,
+				72F8E6AE1E403B03000FCA85 /* CheckListItem.swift */,
 				72F8E6A01E3E5563000FCA85 /* Main.storyboard */,
 				72F8E6A31E3E5563000FCA85 /* Assets.xcassets */,
 				72F8E6A51E3E5563000FCA85 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F8E6AF1E403B03000FCA85 /* CheckListItem.swift in Sources */,
 				72F8E69F1E3E5563000FCA85 /* CheckListViewController.swift in Sources */,
 				72F8E69D1E3E5563000FCA85 /* AppDelegate.swift in Sources */,
 			);

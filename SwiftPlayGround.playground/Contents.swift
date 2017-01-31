@@ -83,6 +83,7 @@ print(dict);
 
 var myInofs = ["fname" : "Skander", "lname" : "Jabouzi"];
 print(myInofs);
+print(myInofs);
 
 myInofs.updateValue("age", forKey: "42");
 print(myInofs);
@@ -92,6 +93,9 @@ print(myInofs);
 
 var setTest : Set = [1,2,34,1,2,3,1,23,4];
 print(setTest);
+
+var test = [[12:10], [11:23], [34:44]];
+print(test[0].startIndex);
 
 
 
