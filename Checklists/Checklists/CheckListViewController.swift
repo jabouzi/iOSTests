@@ -13,7 +13,7 @@ class CheckListViewController: UITableViewController {
     let dataList = ["Walk the dog", "Brush teeth", "Learn iOS development", "Soccer practice", "Eat ice cream"];
     var dataCheked = [true, true, true, true, true];
     
-    let checkListItems: [CheckListItem] = [CheckListItem(text: "Walk the dog", checked: true),
+    var checkListItems: [CheckListItem] = [CheckListItem(text: "Walk the dog", checked: true),
                                            CheckListItem(text: "Brush teeth", checked: true),
                                            CheckListItem(text: "Learn iOS development", checked: true),
                                            CheckListItem(text: "Soccer practice", checked: true),
@@ -29,6 +29,7 @@ class CheckListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath);
         let label = cell.viewWithTag(1000) as! UILabel;
         label.text = checkListItems[indexPath.row].text;
+        configureCheckMark(for: cell, at: indexPath);
         
         return cell;
     }
@@ -36,15 +37,19 @@ class CheckListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let cell = tableView.cellForRow(at: indexPath) {
+            checkListItems[indexPath.row].toggelChecked();
             configureCheckMark(for: cell, at: indexPath);
         }
         tableView.deselectRow(at: indexPath, animated: true);
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        checkListItems.remove(at: indexPath.row);
+        tableView.deleteRows(at: [indexPath], with: .automatic);
+    }
+    
     func configureCheckMark(for cell: UITableViewCell, at indexPath: IndexPath) {
         
-        //checkListItems[indexPath.row].checked = !checkListItems[indexPath.row].checked;
-        checkListItems[indexPath.row].toggelChecked();
         if !checkListItems[indexPath.row].checked {
             cell.accessoryType = .none
         } else {
@@ -62,6 +67,15 @@ class CheckListViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func addItem(_ sender: Any) {
+        let newRowIndex = checkListItems.count;
+        
+        let item = CheckListItem(text: "I am a new row", checked: true);
+        checkListItems.append(item);
+        
+        let indexPath = [IndexPath(row: newRowIndex, section: 0)];
+        tableView.insertRows(at: indexPath, with: .automatic);
+    }
 
 }
 
