@@ -44,6 +44,7 @@ print(arr);
 
 let arr1 = [1,2,3,4,5];
 print(arr1);
+print (arr1.index(of: 2));
 
 print(arr.isEmpty);
 print(arr1.count);
