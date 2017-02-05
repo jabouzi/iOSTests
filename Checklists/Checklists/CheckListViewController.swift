@@ -15,15 +15,34 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
     var checkListItems: [CheckListItem];
     
     required init?(coder aDecoder: NSCoder) {
-        checkListItems = [CheckListItem(text: "Walk the dog", checked: true),
-                                               CheckListItem(text: "Brush teeth", checked: true),
-                                               CheckListItem(text: "Learn iOS development", checked: true),
-                                               CheckListItem(text: "Soccer practice", checked: true),
-                                               CheckListItem(text: "Eat ice cream", checked: true), ];
-
-        super.init(coder: aDecoder)
+//        checkListItems = [CheckListItem(text: "Walk the dog", checked: true),
+//                                               CheckListItem(text: "Brush teeth", checked: true),
+//                                               CheckListItem(text: "Learn iOS development", checked: true),
+//                                               CheckListItem(text: "Soccer practice", checked: true),
+//                                               CheckListItem(text: "Eat ice cream", checked: true), ];
+        checkListItems = [CheckListItem]();
+        super.init(coder: aDecoder);
+        loadCheckListItems();
+        print("Document foldr is \(documentsDirectory())");
+        print("Data file path is \(dataFilePath())");
     }
     
+    func loadCheckListItems() {
+        let path = dataFilePath();
+        if let data = try? Data(contentsOf: path) {
+            let unarchiver = NSKeyedUnarchiver(forReadingWith: data);
+            checkListItems = unarchiver.decodeObject(forKey: "checkListItems") as! [CheckListItem];
+            unarchiver.finishDecoding();
+        }
+    }
+    
+    func saveCheckListItems() {
+        let data = NSMutableData();
+        let archiver = NSKeyedArchiver(forWritingWith: data);
+        archiver.encode(checkListItems, forKey: "checkListItems");
+        archiver.finishEncoding();
+        data.write(to: dataFilePath(), atomically: true);
+    }
     
     func configureCheckMark(for cell: UITableViewCell, with item: CheckListItem) {
         
@@ -39,6 +58,15 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
     }
+    
+    func documentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask);
+        return paths[0];
+    }
+    
+    func dataFilePath() -> URL {
+        return documentsDirectory().appendingPathComponent("Checklists.plist");
+    }
 
     
     func itemDetailViewControllerDidCancel(_ controller: ItemDetailViewController) {
@@ -48,6 +76,7 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishAdding item: CheckListItem) {
         addItem(item: item);
         dismiss(animated: true, completion: nil);
+        saveCheckListItems();
     }
     
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishEditing item: CheckListItem) {
@@ -58,6 +87,7 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
             }
         }
         dismiss(animated: true, completion: nil)
+        saveCheckListItems();
     }
     
     func addItem(item: CheckListItem) {
@@ -91,11 +121,13 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
             configureCheckMark(for: cell, with: checkListItems[indexPath.row]);
         }
         tableView.deselectRow(at: indexPath, animated: true);
+        saveCheckListItems();
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         checkListItems.remove(at: indexPath.row);
         tableView.deleteRows(at: [indexPath], with: .automatic);
+        saveCheckListItems();
     }
     
     override func viewDidLoad() {
