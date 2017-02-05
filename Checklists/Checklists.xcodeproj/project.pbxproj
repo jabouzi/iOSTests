@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720D798D1E46CE9B000D5516 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720D798C1E46CE9B000D5516 /* AllListsViewController.swift */; };
 		72F8E69D1E3E5563000FCA85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F8E69C1E3E5563000FCA85 /* AppDelegate.swift */; };
 		72F8E69F1E3E5563000FCA85 /* CheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F8E69E1E3E5563000FCA85 /* CheckListViewController.swift */; };
 		72F8E6A21E3E5563000FCA85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F8E6A01E3E5563000FCA85 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		720D798C1E46CE9B000D5516 /* AllListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 		72F8E6991E3E5563000FCA85 /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F8E69C1E3E5563000FCA85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72F8E69E1E3E5563000FCA85 /* CheckListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				72F8E69C1E3E5563000FCA85 /* AppDelegate.swift */,
+				720D798C1E46CE9B000D5516 /* AllListsViewController.swift */,
 				72F8E6B01E418616000FCA85 /* ItemDetailViewController.swift */,
 				72F8E69E1E3E5563000FCA85 /* CheckListViewController.swift */,
 				72F8E6AE1E403B03000FCA85 /* CheckListItem.swift */,
@@ -146,6 +149,7 @@
 				72F8E6AF1E403B03000FCA85 /* CheckListItem.swift in Sources */,
 				72F8E6B11E418616000FCA85 /* ItemDetailViewController.swift in Sources */,
 				72F8E69F1E3E5563000FCA85 /* CheckListViewController.swift in Sources */,
+				720D798D1E46CE9B000D5516 /* AllListsViewController.swift in Sources */,
 				72F8E69D1E3E5563000FCA85 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +316,7 @@
 				72F8E6AD1E3E5563000FCA85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

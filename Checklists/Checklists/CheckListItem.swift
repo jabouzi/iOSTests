@@ -12,6 +12,12 @@ class CheckListItem: NSObject, NSCoding {
     var text = "";
     var checked = false;
     
+    init(text: String, checked: Bool) {
+        self.text = text;
+        self.checked = checked;
+        super.init();
+    }
+   
     required init(coder aDecoder: NSCoder) {
         text = aDecoder.decodeObject(forKey: "Text") as! String;
         checked = aDecoder.decodeBool(forKey: "Checked");
@@ -22,13 +28,7 @@ class CheckListItem: NSObject, NSCoding {
         aCoder.encode(text, forKey: "Text");
         aCoder.encode(checked, forKey: "Checked");
     }
-    
-    init(text: String, checked: Bool) {
-        self.text = text;
-        self.checked = checked;
-        super.init();
-    }
-    
+        
     func toggelChecked()
     {
         checked = !checked;
