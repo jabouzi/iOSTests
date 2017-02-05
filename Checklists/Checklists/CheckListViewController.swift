@@ -15,54 +15,11 @@ class CheckListViewController: UITableViewController, ItemDetailViewControllerDe
     var checkListItems: [CheckListItem];
     
     required init?(coder aDecoder: NSCoder) {
-//        checkListItems = [CheckListItem(text: "Walk the dog", checked: true),
-//                                               CheckListItem(text: "Brush teeth", checked: true),
-//                                               CheckListItem(text: "Learn iOS development", checked: true),
-//                                               CheckListItem(text: "Soccer practice", checked: true),
-//                                               CheckListItem(text: "Eat ice cream", checked: true), ];
-        checkListItems = [CheckListItem]();
-        
-        let row0item = CheckListItem(text: "Walk the dog", checked: false)
-        checkListItems.append(row0item)
-        
-        let row1item = CheckListItem(text:  "Brush my teeth", checked: false)
-         checkListItems.append(row1item)
-        
-        let row2item = CheckListItem(text: "Learn iOS development", checked: false)
-        checkListItems.append(row2item)
-        
-        let row3item = CheckListItem(text: "Soccer practice", checked: false)
-        checkListItems.append(row3item)
-        
-        let row4item = CheckListItem(text: "Eat ice cream", checked: false)
-        checkListItems.append(row4item)
-        
-//        checkListItems = [CheckListItem]();
-        
-//        let row0item = CheckListItem()
-//        row0item.text = "Walk the dog"
-//        row0item.checked = false
-//        checkListItems.append(row0item)
-//        
-//        let row1item = CheckListItem()
-//        row1item.text = "Brush my teeth"
-//        row1item.checked = true
-//        checkListItems.append(row1item)
-//        
-//        let row2item = CheckListItem()
-//        row2item.text = "Learn iOS development"
-//        row2item.checked = true
-//        checkListItems.append(row2item)
-//        
-//        let row3item = CheckListItem()
-//        row3item.text = "Soccer practice"
-//        row3item.checked = false
-//        checkListItems.append(row3item)
-//        
-//        let row4item = CheckListItem()
-//        row4item.text = "Eat ice cream"
-//        row4item.checked = true
-//        checkListItems.append(row4item)
+        checkListItems = [CheckListItem(text: "Walk the dog", checked: true),
+                                               CheckListItem(text: "Brush teeth", checked: true),
+                                               CheckListItem(text: "Learn iOS development", checked: true),
+                                               CheckListItem(text: "Soccer practice", checked: true),
+                                               CheckListItem(text: "Eat ice cream", checked: true), ];
 
         super.init(coder: aDecoder)
     }
