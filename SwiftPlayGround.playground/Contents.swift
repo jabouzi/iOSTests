@@ -97,5 +97,126 @@ print(setTest);
 var test = [[12:10], [11:23], [34:44]];
 print(test[0].startIndex);
 
+var _myInofs:NSArray = [["fname" : "Skander"], ["lname" : "Jabouzi"]];
+let _index = _myInofs.index(of: ["fname" : "Skander"]);
+
+var _guard = 10;
+
+func testGuard(_guard: Int) {
+    guard _guard > 20 else {
+        print("GUARD");
+        return;
+    }
+}
+
+testGuard(_guard: _guard);
+
+
+func chooseStepFunction(backward: Bool) -> (Int) -> Int {
+    func stepForward(input: Int) -> Int { return input + 1 }
+    func stepBackward(input: Int) -> Int { return input - 1 }
+    return backward ? stepBackward : stepForward
+}
+
+var currentValue = -4;
+
+let moveNearZero = chooseStepFunction(backward: currentValue > 0);
+print("\(currentValue)");
+
+while currentValue != 0 {
+    print("\(currentValue)");
+    currentValue = moveNearZero(currentValue);
+}
+
+print("Zeo!");
+
+func makeLogger() -> (String) -> String {
+    func log(s: String) -> String {
+        print("Log : \(s)");
+        return s;
+    }
+    return log;
+}
+
+var myLog = makeLogger();
+myLog("Test log");
+
+
+let nums = [1,3,5,7];
+func doubler(x: Int) -> Int {
+    return x * 2;
+}
+
+let doubledNums = nums.map(doubler);
+print(doubledNums);
+
+let closureDoubledNums = nums.map({ (x: Int) -> Int in return x * 2 });
+print(closureDoubledNums);
+
+let closueDoubledNums2 = nums.map({ x in x * 2});
+print(closueDoubledNums2);
+
+let closueDoubledNums3 = nums.map({ $0 * 2});
+print(closueDoubledNums2);
+
+func jediBladeColor (colors: String...) -> () {
+    for color in colors {
+        print("\(color)")
+    }
+}
+jediBladeColor(colors: "red","green");
+
+func makeMultiplier(multiplier: Int) -> (Int) -> Int {
+    return {
+        $0 * multiplier;
+    }
+}
+
+let doubler2 = makeMultiplier(multiplier: 2);
+doubler2(10);
+let tripler = makeMultiplier(multiplier: 3);
+tripler(10);
+nums.map(doubler2);
+nums.map(tripler);
+
+func makeLevelledLogger(level: String) -> (String) -> String {
+    return {
+        (message: String) -> String in
+        let logMessage = "\(level) :: \(message)";
+        print(logMessage);
+        return(logMessage);
+    }
+}
+
+let debug = makeLevelledLogger(level: "DEBUG");
+let warning = makeLevelledLogger(level: "WARNING");
+let message = makeLevelledLogger(level: "MESSAGE");
+
+debug("A message from our debug logger");
+warning("Consider yourself warned");
+message("Life, the universe, and everything...");
+
+func timesTenFunction(number: Int) -> Int {
+    return number * 10;
+}
+
+let timesTenClosure: (Int) -> Int = { $0 * 10 }
+timesTenFunction(number: 10);
+timesTenClosure(10);
+timesTenFunction(number: 20);
+timesTenClosure(20);
+
+func sum(from: Int, to: Int, closure: (Int) -> (Int)) -> Int {
+    var sum = 0;
+    for i in from...to {
+        sum += closure(i)
+    }
+    
+    return sum;
+}
+sum(from: 0, to: 10, closure: timesTenClosure);
+sum(from: 0, to: 10, closure: timesTenFunction);
+print(sum(from: 0, to: 10, closure: {$0 * 10}));
+print(sum(from: 0, to: 10) { $0 * 10 }); // trailing closure
 
 
