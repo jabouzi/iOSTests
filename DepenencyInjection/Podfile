@@ -6,5 +6,5 @@ target 'DepenencyInjection' do
 	platform :ios, '8.0'
 	use_frameworks!
 
-	pod 'Swinject', '~> 0.2.0'
+	pod 'Swinject', '2.0.0'
 end
