@@ -10,28 +10,28 @@ import UIKit
 
 protocol ListDetailViewControllerDelegate: class {
     func listDetailViewControllerDidCancel(_ controller: ListDetailViewController );
-    func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding item: CheckListItem);
-    func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing item: CheckListItem);
+    func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding item: CheckList);
+    func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing item: CheckList);
     
 }
 
 class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     
     
-    @IBOutlet weak var itemText: UITextField!
+    @IBOutlet weak var listText: UITextField!
     @IBOutlet weak var doneButon: UIBarButtonItem!
     
     weak var delegate:ListDetailViewControllerDelegate?
     
-    var editItem: CheckListItem?;
+    var editItem: CheckList?;
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
-        itemText.becomeFirstResponder();
+        listText.becomeFirstResponder();
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let oldText = itemText.text! as NSString;
+        let oldText = listText.text! as NSString;
         let newText = oldText.replacingCharacters(in: range, with: string) as NSString;
         
         doneButon.isEnabled = (newText.length > 0);
@@ -41,11 +41,11 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     
     @IBAction func done() {
         if let item = editItem {
-            item.text = itemText.text!;
+            item.text = listText.text!;
             delegate?.listDetailViewController(self, didFinishEditing: item);
         } else {
-            delegate?.listDetailViewController(self, didFinishAdding: CheckListItem(text: itemText.text!, checked: false))
-            print(itemText.text!);
+            delegate?.listDetailViewController(self, didFinishAdding: CheckList(text: listText.text!))
+            print(listText.text!);
         }
         //        dismiss(animated: true, completion: nil);
     }
@@ -61,11 +61,11 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemText.delegate = self;
+        listText.delegate = self;
         
         if let item = editItem {
-            title = "Edit Item";
-            itemText.text = item.text;
+            title = "Edit List";
+            listText.text = item.text;
             doneButon.isEnabled = true;
         }
         // Do any additional setup after loading the view, typically from a nib.

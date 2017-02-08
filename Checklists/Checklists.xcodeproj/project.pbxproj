@@ -45,6 +45,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		728D8E7D1E478C6400B27A70 /* ListsItems */ = {
+			isa = PBXGroup;
+			children = (
+				72F8E69E1E3E5563000FCA85 /* CheckListViewController.swift */,
+				72F8E6AE1E403B03000FCA85 /* CheckListItem.swift */,
+				72F8E6B01E418616000FCA85 /* ItemDetailViewController.swift */,
+			);
+			name = ListsItems;
+			sourceTree = "<group>";
+		};
+		728D8E7E1E478CA700B27A70 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				720D798C1E46CE9B000D5516 /* AllListsViewController.swift */,
+				7279EA761E47654A00ED8A8C /* CheckList.swift */,
+				7279EA781E4765EB00ED8A8C /* ListDetailViewController.swift */,
+			);
+			name = Lists;
+			sourceTree = "<group>";
+		};
 		72F8E6901E3E5563000FCA85 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +84,9 @@
 		72F8E69B1E3E5563000FCA85 /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
+				728D8E7E1E478CA700B27A70 /* Lists */,
+				728D8E7D1E478C6400B27A70 /* ListsItems */,
 				72F8E69C1E3E5563000FCA85 /* AppDelegate.swift */,
-				720D798C1E46CE9B000D5516 /* AllListsViewController.swift */,
-				72F8E69E1E3E5563000FCA85 /* CheckListViewController.swift */,
-				72F8E6AE1E403B03000FCA85 /* CheckListItem.swift */,
-				7279EA761E47654A00ED8A8C /* CheckList.swift */,
-				72F8E6B01E418616000FCA85 /* ItemDetailViewController.swift */,
-				7279EA781E4765EB00ED8A8C /* ListDetailViewController.swift */,
 				72F8E6A01E3E5563000FCA85 /* Main.storyboard */,
 				72F8E6A31E3E5563000FCA85 /* Assets.xcassets */,
 				72F8E6A51E3E5563000FCA85 /* LaunchScreen.storyboard */,
